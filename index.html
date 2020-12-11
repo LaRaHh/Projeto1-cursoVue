@@ -27,7 +27,10 @@
                 <div>{{ monsterLife }} %</div>
             </div>
         </div>
-        <div class="panel result"></div>
+        <div v-if="hasResult" class="panel result">
+            <div v-if="monsterLife == 0" class="win">Você foi o campeão!! <img src="img/win.png" alt="Ganhou"></div>
+            <div v-else class="lose">Você foi o perdedor...</div>
+        </div>
         <div class="panel button"></div>
         <div class="panel logs"></div>
     </div>
